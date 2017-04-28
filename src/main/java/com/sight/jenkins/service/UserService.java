@@ -16,4 +16,6 @@ public interface UserService {
     List<Object> getAllUser();
 
     User getUserByID(Integer id);
+
+    boolean userLogin(String username, String password);
 }

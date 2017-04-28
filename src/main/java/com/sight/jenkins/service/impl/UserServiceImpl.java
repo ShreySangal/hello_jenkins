@@ -1,7 +1,9 @@
 package com.sight.jenkins.service.impl;
 
+import com.sight.jenkins.dao.UserDao;
 import com.sight.jenkins.domain.User;
 import com.sight.jenkins.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +18,8 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
 
+    @Autowired
+    private UserDao userDao;
 
     @Override
     public List<Object> getAllUser() {
@@ -26,5 +30,14 @@ public class UserServiceImpl implements UserService{
     @Override
     public User getUserByID(Integer id) {
         return null;
+    }
+
+    @Override
+    public boolean userLogin(String username, String password) {
+        Integer count = userDao.checkUserLogin(username, password);
+        if(count > 0){
+            return true;
+        }
+        return false;
     }
 }
