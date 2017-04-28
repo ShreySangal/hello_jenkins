@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2017/4/27 14:43.
  */
 @RestController
-public class HelloController {
+public class IndexController {
 
     @GetMapping(value = "/hello")
-    public String index(){
+    public String showIndex(){
         return "index";
     }
 }
