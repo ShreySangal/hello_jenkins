@@ -1,5 +1,6 @@
 package com.sight.jenkins.service.impl;
 
+import com.sight.jenkins.domain.User;
 import com.sight.jenkins.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<Object> getAllUser() {
 
+        return null;
+    }
+
+    @Override
+    public User getUserByID(Integer id) {
         return null;
     }
 }

@@ -1,5 +1,7 @@
 package com.sight.jenkins.service;
 
+import com.sight.jenkins.domain.User;
+
 import java.util.List;
 
 /**
@@ -12,4 +14,6 @@ import java.util.List;
 public interface UserService {
 
     List<Object> getAllUser();
+
+    User getUserByID(Integer id);
 }
