@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<Object> getAllUser() {
-
+        System.out.println("sadadasda");
         return null;
     }
 
