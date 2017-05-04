@@ -18,4 +18,6 @@ public interface UserService {
     User getUserByID(Integer id);
 
     boolean userLogin(String username, String password);
+
+    Integer register(String username, String password);
 }

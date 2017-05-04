@@ -42,4 +42,9 @@ public class UserServiceImpl implements UserService{
         }
         return false;
     }
+
+    @Override
+    public Integer register(String username, String password) {
+        return null;
+    }
 }
